@@ -6,4 +6,6 @@ import com.draco.photoapp.api.users.data.entity.UsersEntity;
 
 public interface UsersRepository extends CrudRepository<UsersEntity, Long> {
 
+	UsersEntity findByEmail(String username);
+
 }

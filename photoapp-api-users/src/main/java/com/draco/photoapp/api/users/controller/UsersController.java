@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.draco.photoapp.api.users.data.dto.UsersDto;
 import com.draco.photoapp.api.users.data.model.UserResponseModel;
-import com.draco.photoapp.api.users.data.model.UsersRequest;
+import com.draco.photoapp.api.users.data.model.UsersRequestModel;
 import com.draco.photoapp.api.users.service.UsersService;
 
 @RestController
@@ -34,7 +34,7 @@ public class UsersController {
 	}
 
 	@PostMapping
-	public ResponseEntity<UserResponseModel> createUser(@Valid @RequestBody UsersRequest userRequest) {
+	public ResponseEntity<UserResponseModel> createUser(@Valid @RequestBody UsersRequestModel userRequest) {
 
 		ModelMapper mapper = new ModelMapper();
 		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
